@@ -1,0 +1,799 @@
+/*
+  Main elements
+*/
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+  padding-top: 3.25rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: .9rem;
+}
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: .6rem;
+}
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: .4rem;
+}
+h5 {
+  font-size: 1.2rem;
+  font-weight: 450;
+  margin-top: .3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+div#background {
+  background-attachment: fixed;
+  background-attachment: fixed;
+  background-image: url("/images/background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  filter: alpha(opacity=20);
+  opacity: 0.20;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#pagewrapper {
+  /*background: white;*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 1200px) {
+  #pagewrapper {
+    width: 100%
+  }
+}
+
+footer {
+  border-top: 1px solid #dee2e6;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  text-align: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.footer {
+  border-top: 1px solid #dee2e6;
+  background-color: transparent;
+  padding: 2rem 1.5rem 1rem;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  footer {
+    width: auto;
+  }
+}
+
+header {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+nav#navbar{
+  background-color: transparent;
+  margin-bottom: 15px;
+}
+nav#navbar .navbar-brand {
+  color: #0059b8;
+  font-weight: 400;
+  font-size: 28px;
+}
+nav#navbar .navbar-brand div,
+nav#navbar .navbar-brand img {
+}
+nav#navbar .navbar-brand div {
+  display: inline;
+  vertical-align: bottom;
+  padding-left: 10px;
+}
+nav#navbar .navbar-brand img {
+  max-height: 70px;
+}
+nav#navbar a.nav-link {
+  color: #0059b8;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  margin-right: 25px;
+}
+nav#navbar div#navbarInside {
+  width: 100%;
+}
+a.navbar-item.logo {
+  padding: 0 10px;
+}
+.navbar.is-fixed-top {
+  top: 0;
+  background: #c4c4c473;
+}
+@media only screen and (max-width: 768px) {
+  header {
+    width: auto;
+  }
+  nav#navbar .navbar-brand div {
+    display: none;
+  }
+  nav#navbar ul.navbar-nav {
+    margin-top: 200px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav#navbar {
+    display: block;
+  }
+}
+
+
+/*
+  Navbar Bulma
+*/
+html.loggedin-true nav.navbar .navbar-end .buttons {
+  display: none
+}
+
+
+/*
+  Navbar settings
+*/
+div#navbarSettings {
+  background: whitesmoke;
+  position: fixed;
+  z-index: 666;
+  width: 100%;
+  margin: 0 -20px;
+  -webkit-box-shadow: 0 6px 5px 0 rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 6px 5px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 6px 5px 0 rgba(0,0,0,0.75);
+}
+div#navbarSettings span.nav-item a,
+div#navbarSettings a.nav-link {
+  color: black;
+}
+
+
+
+/*
+  Settings overview
+*/
+div#settings {
+  background: white;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid #bab2b2;
+  padding: 1rem;
+}
+div#settings div {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+div#settings .button {
+  width: 200px;
+  background: white;
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(138,138,138,1);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(138,138,138,1);
+  box-shadow: 1px 1px 5px 0 rgba(138,138,138,1);
+}
+div#settings .button:hover {
+  color: #042c57;
+}
+div#settings hr {
+  margin: .5rem 0;
+}
+
+
+/*
+  Settings page
+*/
+div#settingsEdit {
+  background: #ffffffd6;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  padding: 10px;
+}
+
+
+/*
+  Blog & Page post
+*/
+div#blogData,
+div#pageData {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#blogData.new,
+div#pageData.new {
+  max-width: 500px;
+}
+div#blogData.new div.blogRequired,
+div#pageData.new div.pageRequired {
+  margin-top: 1rem;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#blogData.new div.field,
+div#pageData.new div.field {
+  margin-top: 1rem;
+}
+button.newblogSave,
+button.newpageSave,
+div.blogOptions.main div.buttonGroup,
+div.pageOptions.main div.buttonGroup {
+  margin-top: 1.3rem;
+}
+div#blogHeader,
+div#pageHeader {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+span.blogDelete,
+span.pageDelete {
+  margin-right: auto;
+  margin-left: auto;
+}
+div.blogOptions,
+div.pageOptions {
+  display: none;
+  background: white;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #80808094;
+  margin-top: 10px;
+  max-width: 500px;
+}
+div#blogData.new div.blogOptions,
+div#pageData.new div.pageOptions,
+div.blogOptions.main,
+div.pageOptions.main {
+  display: block;
+}
+div.blogOptions .input,
+div.blogOptions .select,
+div.blogOptions .textarea,
+div.pageOptions .input,
+div.pageOptions .select,
+div.pageOptions .textarea {
+  font-size: .9rem
+}
+@media only screen and (max-width: 768px) {
+  div#blogData button,
+  div#pageData button {
+    margin-top: 15px;
+  }
+}
+
+
+
+/*
+    All blog posts
+*/
+div#allblogPosts ul {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  width: 100%;
+}
+div#allblogPosts ul>li {
+  background: white;
+  border: 1px solid #bcbcbc5c;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  width: 100%;
+}
+div#allblogPosts .editChip {
+  font-size: 0.8rem;
+  background: grey;
+  color: white;
+  padding: 6px;
+  border-radius: 10px;
+}
+div#allblogPosts .editChip a {
+  color: white;
+}
+div#allblogPosts a.blognameEdit {
+  color: black;
+}
+div#allblogPosts .category,
+div#allblogPosts .tags {
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: .75rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  margin-top: .7rem;
+  padding-left: .75em;
+  padding-right: .75em;
+  white-space: nowrap;
+}
+div#allblogPosts .category {
+  background-color: #959595;
+  color: #ffffff;
+}
+div#allblogPosts .category:hover {
+  background-color: #b5b0b0;
+  color: rgb(68, 68, 68);
+}
+div#allblogPosts .category.active:hover,
+div#allblogPosts .category.active {
+  border: 1px solid black;
+  background-color: #575656;
+  color: white;
+  cursor: default;
+}
+div#allblogPosts .tags {
+  background-color: #f5f5f5;
+  color: #4a4a4a;
+  margin-bottom: 0;
+}
+div#allblogPosts .tags:hover {
+  background-color: #e4e4e4;
+}
+/* Category selector on blog overview */
+div#allblogPosts .categories {
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  text-align: center;
+}
+div#allblogPosts .categories div {
+  display: inline-block;
+}
+div#allblogPosts .categories div a.category {
+  font-size: 1.2rem;
+  height: 2rem;
+  margin-top: 0;
+}
+
+
+/*
+    All pages
+*/
+div#allpagePosts {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  width: 100%;
+}
+div#allpagePosts ul>a>div {
+  background-color: white;
+  border: 1px solid #bcbcbc5c;
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  width: 100%;
+}
+div#allpagePosts ul>a>div:hover {
+  background-color: #ebebeb;
+}
+
+
+/*
+  Users
+*/
+div#users {
+  background: #ffffffd6;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 10px;
+}
+div#users div.field {
+  margin-bottom: 10px;
+}
+div#users input,
+div#users select{
+  font-size: .9rem;
+}
+div#users span a.delete {
+  color: white;
+}
+div#usersAddContainer {
+  margin-bottom: 20px;
+}
+form#usersAdd {
+  border: 1px solid grey;
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+div#users label {
+  margin-right: 10px;
+  width: 50px;
+}
+div#users select {
+  width: 205px;
+  margin-left: 3px;
+}
+
+
+/*
+  Users profile
+*/
+div#user {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#user label {
+  width: 200px;
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+div#user #editProfilePhoto {
+  border-radius: 2px;
+  border: 1px solid grey;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 406px;
+  padding: 5px 2px;
+  text-align: center;
+  background: white;
+}
+div#user div.twofa-container {
+  border: 1px solid black;
+  padding: 5px;
+}
+div#user div.twofa-container input {
+  margin: 5px 0 5px 0;
+}
+div#user input.twofaEnabled {
+  display: inline-block;
+  font-weight: 700;
+  background-color: #a1ffb1;
+  color: #3a3a3a;
+  width: auto;
+}
+div#user summary {
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  div#user label {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  div#user div.save {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  div#user button.save {
+    margin-top: 15px;
+    margin-right: auto;
+  }
+}
+
+/*
+  Users profile image
+*/
+div#user.image {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+
+
+/*
+  Files
+*/
+div#files {
+  background: #ffffffd6;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding: 10px;
+}
+details#fileAddContainer>summary {
+  cursor: pointer;
+}
+form#fileAdd {
+  border: 1px solid grey;
+  width: 320px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+form#fileAdd input#file {
+  margin-bottom: 10px;
+}
+div#files span a {
+  color: white;
+}
+div#files span.deleteFile {
+  cursor: pointer;
+}
+div#files td.is-danger {
+  text-align: center;
+}
+
+
+
+
+/*
+  Plugins
+*/div#plugins {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#plugins .buttons a {
+  font-size: 95%
+}
+div#plugins .buttons div {
+  margin-left: auto;
+  margin-right: auto;
+}
+div#plugins .buttons div a {
+  width: 200px;
+}
+div#plugins span.version {
+  margin-left: 10px;
+}
+div#plugins div.message-header>h5 {
+  width: 100%;
+}
+div#plugins article.message {
+  border: 1px solid;
+  margin-bottom: 0.4rem;
+}
+div#plugins p.pluginCount {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul.pluginSettings {
+  padding-left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+}
+li.pluginSettings {
+  border: 1px solid rgba(128, 128, 128, 0.55);
+  list-style-type: none;
+  padding: 10px 15px;
+  width: 350px;
+  background: white;
+  margin-bottom: 5px;
+}
+li.pluginSettings.disabled {
+  background: rgba(128, 128, 128, 0.36);
+}
+li.pluginSettings>div {
+  display: inline-block;
+}
+li.pluginSettings .name {
+  display: inline;
+  width: 240px;
+}
+li.pluginSettings .name i {
+  font-size: 90%;
+}
+li.pluginSettings .enablePlugin,
+li.pluginSettings .disablePlugin {
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+  padding: 0 15px;
+}
+li.pluginSettings .enablePlugin {
+  background: rgba(0, 128, 0, 0.5);
+}
+li.pluginSettings .disablePlugin {
+  background: rgba(194, 54, 54, 0.5);
+}
+li.pluginSettings.enabled .enablePlugin {
+  display: none;
+}
+li.pluginSettings.disabled .disablePlugin {
+  display: none;
+}
+
+
+
+/*
+  Plugins repo
+*/
+ul.pluginRepo {
+  padding-left: 10px;
+}
+li.pluginRepo {
+  border: 1px solid rgba(128, 128, 128, 0.55);
+  list-style-type: none;
+  padding: 10px 15px;
+  background: #ffffffd9;
+  margin-bottom: 10px;
+}
+li.pluginRepo span.version {
+  background: rgb(236, 236, 236);
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 0 2px;
+}
+li.pluginRepo span.version.git {
+  background-color: #ffc107;
+}
+
+/*
+  Plugins details
+*/
+#pluginDetails {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+#pluginDetails>div {
+  margin-bottom: 5px;
+}
+#pluginDetails b {
+  font-weight: bold;
+}
+
+
+/*
+  Server info
+*/
+#serverinfo {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px;
+  word-break: break-all;
+}
+
+
+
+/*
+  Config
+*/
+#config {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+
+
+/*
+  Firejail
+*/
+#firejail {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px;
+}
+
+
+/*
+  Saved notification
+*/
+#notifySaved {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #27cb4ede;
+  text-align: center;
+  line-height: 2.5;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+}
+
+
+
+/*
+	CodeMirror
+*/
+.CodeMirror {
+  height: 100% !important;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+
+/*
+	GrapeJS
+*/
+.gjs-mdl-dialog {
+  margin-top: 75px!important;
+  max-height: 100vh;
+  overflow: auto;
+}
+.gjs-block {
+  min-height: auto!important;
+  margin: 2px 2.5% 2px!important;
+}
+.gjs-block.fa {
+  font-size: 2em!important;
+  line-height: 1em!important;
+  padding: 6px!important;
+}
+
+
+
+/*
+	GrapeJS
+*/
+#summernoteContainer {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/*
+  Avatar
+*/
+img.libravatar:hover {
+  filter: hue-rotate(180deg);
+}
+
+
+
+/*
+  2 Factor Auth
+*/
+.twofaTechList {
+  list-style: disc;
+  margin-left: 25px;
+}
